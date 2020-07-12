@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     config.vm.box = "centos/8"
 
     config.vm.define "bdserver" do |server|
-      server.vm.network "public_network", :bridge => "enp1s0", ip: "192.168.15.140"
+      server.vm.network "public_network", :bridge => "enp1s0", ip: "192.168.0.140"
       server.vm.provider "virtualbox" do |vb|
         vb.memory = "2048"
         vb.cpus = "1"
